@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import NewLearning from './components/Learnings/NewLearning';
+import Learnings from './components/Learnings/Learnings';
 
-function App() {
+const App = () => {
+  const learnings=[
+    {
+      id:'l1',
+      title: 'wordpress, domain transfer, React',
+      hours: 12,
+      date: new Date(2022, 2, 5)
+    },
+    {
+      id:'l1',
+      title: 'React',
+      hours: 12,
+      date: new Date(2022, 2, 6)
+    },
+    {
+      id:'l1',
+      title: 'Algorithm, React',
+      hours: 4,
+      date: new Date(2022, 2, 7)
+    },
+    {
+      id:'l1',
+      title: 'HTML, CSS, Wordpress',
+      hours: 4,
+      date: new Date(2022, 2, 8)
+    }
+  ]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <NewLearning />
+      <Learnings learnings={learnings}></Learnings>
     </div>
   );
 }
